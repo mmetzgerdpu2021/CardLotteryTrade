@@ -1,0 +1,140 @@
+<html> 
+	<head>
+		<script src="./jquery-3.1.1.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+		<script src="./CardLotteryTrade.js"></script> 
+	</head> 
+  <body style="background-color:LightSlateGray;"> 
+    <table> 
+	<tr>
+	<b>Card Lottery Trade</b>
+	</tr> 
+	<tr>
+	<br><br>
+	<td>Get a Card!</td>
+	<tr>
+	  <table border="0" cellpadding="0" width="350"	id='BuyCardTable'>
+	    <tr>
+	      <td>
+		Your Address:
+	      </td>
+	      <td>
+		<input type="text" id="YourAccount" width="500" />
+	      </td>
+	      <td>
+		<button onclick="buyCards()">Get!</button>
+	      </td>
+	    </tr>
+	  </table>
+	</tr>
+
+	<br>
+
+        <tr>Trade a Card!</tr>
+        <tr>
+          <table border="0" cellpadding="0" width="1000" id='TradeCardTable'>
+            <tr>
+              <td>
+                Your Address:
+              </td>
+              <td>
+                <input type="text" id="SendFrom" width="500" />
+              </td>
+              <td>
+                Reciever's Address:
+              </td>
+              <td>
+                <input type="text" id="SendTo" width="500" />
+              </td>
+              <td>
+                Card Number:
+              </td>
+              <td>
+                <input type="text" id="cardNumber" width="100" />
+              </td>
+              <td>
+                <button onclick="tradeCard()">Send!</button>
+              </td>
+            </tr>
+          </table>
+        </tr>
+
+	<br>
+
+        <td>Remove a Card!</td>
+        <tr>
+          <table border="0" cellpadding="0" width="700" id='RemoveCardTable'>
+            <tr>
+              <td>
+                Your Address:
+              </td>
+              <td>
+                <input type="text" id="YourAccount2" width="500" />
+              </td>
+              <td>
+                Card Number:
+              </td>
+              <td>
+                <input type="text" id="cardDeleteNum" width="100" />
+              </td>
+              <td>
+                <button onclick="removeCards()">Delete!</button>
+              </td>
+            </tr>
+          </table>
+        </tr>
+
+	<br>
+
+	<td> <b>Win the RARE cards!</b> </td>
+	<tr>
+	<table border="0" cellpadding="0" width="700" id='RareCardImages'>
+	  <tr>
+	    <td>
+		<img src="frogcard08.jpg" alt="Card 08" height="150" width="100">
+	    </td>
+            <td>
+                <img src="frogcard10.jpg" alt="Card 08" height="150" width="100">
+	    </td>
+            <td>
+                <img src="frogcard09.jpg" alt="Card 08" height="150" width="100">
+	    </td>
+	  </tr>
+	</table>
+	</tr>
+
+	<br>
+
+	<tr>See Cards!</tr>
+        <tr>
+          <table border="0" cellpadding="0" width="700" id='SeeCardsInputTable'>
+            <tr>
+              <td>
+                Your Address:
+              </td>
+              <td>
+                <input type="text" id="TaxPayer" width="500" />
+              </td>
+              <td>
+                Address to View:
+              </td>
+              <td>
+                <input type="text" id="ToViewHash" width="500" />
+              </td>
+              <td>
+                <button onclick="seeCards()">See Cards!</button>
+              </td>
+            </tr>
+          </table>
+        </tr>
+
+	<tr>
+          <table border="0" cellpadding="0" width="400" id="viewCardsTable">
+	  </table>
+	</tr>
+	<tr/>
+	<tr/>
+
+    </table> 
+  </body> 
+</html>

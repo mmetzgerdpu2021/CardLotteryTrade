@@ -1,0 +1,27 @@
+My plan is to create a lottery/trading game using the ethereum network. It will have three main parts: buying a "card,"
+looking at all of one's "cards," and trading/sending a "card" to another ethereum account holder. I would like to create
+an HTML/JS interface for this project. 
+
+"Cards" will be created with varying rareness. (I will probably only create ten or so cards for this proof of concept,
+but ideally there would be hundreds like in a real trading card game.) When one first accesses the page, he or she will be able
+to check how many cards one holds (which should be none unless someone else sent one) and will be able to buy a card through
+a "lottery" system. Because contracts must be deterministic, my idea is to base the "randomness" on the time and the user's
+account hash. If there is a better way to do this, I would like some help with that. This transaction may cost 0.0025 ether
+(ideally about $0.50). There is no limit to how many cards a user can buy, but there is a limit to how many cards a user can 
+own. (Because I will be having only about 10 cards, a 50 limit seems reasonable.) In order to get rid of a card, a user must
+trade them away.
+
+There will be a "dump" account to trade to as well, but in order to normally trade, one must own the card he or she is trading
+and know the account address of who he or she is trading to. If the reciever has the limit of cards, he or she cannot recieve
+the trade. It does not cost anything other than gas to trade.
+
+Additionally, a user on the page can enter an account and view all the cards said account holds (ie this is public information).
+My idea is to keep a dictionary of lists for where cardholders are the key and cards are the contents of the lists. (If there
+is a better collection for this, please let me know.) For the page retrieval, all cards will be shown to the page by accessing
+the dictionary via the address hex.
+
+Out of the ten cards, three will be "very common," three will be "common," two will be "rare," one will be "very rare," and one
+will be "ultra rare." 
+
+Finally, if the owner of the contract will be able to retrieve the ether put into the contract into the same account at any time.
+If the contract is killed, all cards will become inaccessible.
